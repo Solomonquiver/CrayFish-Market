@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="cart.html">
+
+  <style>
+
+  *{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+   }
+
+    nav {
+      display: flex;
+      flex-direction: row;
+      /* border: 3px solid black; */
+      width: 100%;
+      height: 5vh;
+      /* align-items: center; */
+      background-color:rgb(2, 75, 2);
+      justify-content: left;
+      position: fixed;
+      z-index: 2;
+   
+      
+    
+    
+    }
+
+    .nextnav{
+      position: fixed;
+      z-index: 2;
+      margin-top: 20px;
+    }
+
+     .logo{
+      background-color: rgb(2, 85, 30);
+      width: 7%;
+      height: 5vh;
+      margin-left: 5px;
+    }
+
+    
+      .companyname{
+      /* background-color: rgb(0, 4, 255); */
+      width: 100%;
+      height: 5vh;
+      text-align: center;
+      margin-left: -88px;
+    }
+
+/*     
+      .hambuger{
+      background-color: rgb(255, 0, 0);
+      width: 20%;
+      height: 5vh;
+    } */
+
+
+    
+
+    .body, .body2{
+      display: flex;
+      flex-direction: column;
+      /* background-color: yellowgreen; */
+      width: 100%;
+      height: 25vh;
+      margin-top: 30px;
+      /* row-gap: 40px; */
+      margin-left: 2px;
+    }
+
+    .firstrow{
+      display: flex;
+      flex-direction: column;
+      
+    }
+
+    .secondrow{
+      display: flex;
+      flex-direction: column;
+    }
+
+
+
+    .first{
+      width: 160px;
+      height: 25vh;
+      background-color: rgb(8, 37, 116);
+        margin-top: 34px;
+    }
+
+     .second{
+      width: 160px;
+      height: 25vh;
+      background-color: rgb(8, 37, 116);
+        margin-top: 34px;
+    }
+
+     .third{
+      width: 160px;
+      height: 25vh;
+      background-color: rgb(8, 37, 116);
+        margin-top: 34px;
+     
+      
+    }
+
+
+    .fourth{
+      width: 160px;
+      height: 25vh;
+      background-color: rgb(8, 37, 116);
+        margin-top: 34px;
+    }
+
+     .fifth{
+       width: 160px;
+      height: 25vh;
+      background-color: rgb(8, 37, 116);
+        margin-top: 34px;
+    }
+
+     .sixth{
+      width: 160px;
+      height: 25vh;
+      background-color: rgb(8, 37, 116);
+        margin-top: 34px;
+      
+    }
+
+    .first,.second, .third, .fourth, .fifth, .sixth {
+      position: relative;
+    
+    }
+
+     .first .second .third .fourth .fifth .sixth,img:hover {
+      opacity: 0.6;
+     
+   
+    }
+
+   
+
+    .addtocart{
+      width: 28px;
+      height: 4vh;
+      background-color: rgb(236, 236, 230);
+      position: absolute;
+      top: 5px;
+      right: 8px;
+      border-radius: 40px;
+      opacity: 0.5;
+    
+    }
+
+    .addtocart:active{
+     
+      background-color: rgb(255, 255, 255);
+       opacity: 0.8;
+     
+    }
+
+    .logo img{
+      width: 25px;
+      height: 2vh;
+      margin-left: 10px;
+      margin-top: 9px;
+      background: rgb(255, 255, 255);
+      /* border-radius: 18px; */
+    }
+
+    .companyname h1{
+      color: rgb(255, 255, 255);
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-size: 15px;
+       margin-top: 8px;
+       margin-left: 40px;
+       text-align: center;
+          
+    }
+
+    .nextnav img{
+      width: 20px;
+      height: 3vh;
+      margin-left: 100px;
+    
+    }
+
+     .nextnav a, .about, .services{
+      font-size: 14px;
+      /* margin-left: 100px; */
+      color: white;
+      /* background: red; */
+      text-decoration: none;
+      
+    
+    }
+
+    .services{
+      line-height: 1.6;
+      cursor: pointer;
+    }
+
+    .services:hover{
+    color: rgb(0, 0, 0);
+    background-color: white;
+    padding: 4px;
+    line-height: 1;
+    }
+
+    .services:active{
+       background-color: rgb(48, 192, 34);
+    }
+
+    .nextnav a:hover{
+    color: rgb(0, 0, 0);
+    background-color: white;
+   margin-top: 11px;
+   padding-bottom: 30px;
+   padding-left: 14px;
+   padding-right: 14px;
+   padding-top: 3px;
+
+  
+} 
+
+    .nextnav a:active{
+    color: rgb(0, 0, 0);
+    background-color: rgb(48, 192, 34);
+    padding: 4px;
+
+  
+} 
+
+.about{
+  line-height: 1.6;
+  cursor: pointer;
+  
+
+}
+
+.about:hover{
+    color: rgb(0, 0, 0);
+    background-color: white;
+    padding: 2px;
+    line-height: 1.5;
+}
+
+  .about:active{
+    color: rgb(0, 0, 0);
+    background-color: rgb(48, 192, 34);
+    padding: 4px;
+    
+
+  
+}
+    
+
+     .nextnav .about, .services, .more {
+    margin-left: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 10px;
+    
+    }
+/* 
+    .more{
+    margin-left: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 10px;
+    } */
+
+    
+
+
+
+    .body, img{
+      width: 160px;
+      height: 25vh;
+    }
+
+    /* .foot{
+      width: 100%;
+      height: 26vh;
+      background-color: black;
+      margin-top: 13px;
+    } */
+
+    /* .nextnav{
+      width: 100%;
+    } */
+
+      .hambuger {
+      width: 16px;
+      height: 16px;
+      margin-left: 100px;
+      position: absolute;
+      top: 10px;
+      right: 106px;
+      background: white;
+      padding: 2px;
+      border-radius: 10px;
+      
+    }
+
+    
+      .hambuger:active {
+     background-color: rgb(255, 255, 255);
+      
+    }
+    
+      .addtocart img {
+      width: 20px;
+      height: 20px;
+      margin-left: 100px;
+      position: absolute;
+      top: 5px;
+      right: 4px;
+      
+    }
+
+    .abtdrop{
+      width: 250px;
+      height: 20vh;
+      border: 1px solid black;
+      position: fixed;
+      z-index: 3;
+      background: white;
+      margin-top: 70px;
+      display: none;
+      margin-left: 4px;
+   
+     
+      
+      
+    }
+
+
+
+    
+
+     .ourdrp{
+      width: 250px;
+      height: 20vh;
+      border: 1px solid black;
+      position: fixed;
+      z-index: 3;
+      background: white;
+      margin-top: 70px;
+      display: none;
+      margin-left: 4px;
+      animation-name: zoom;
+      animation-duration: 2s;
+    }
+
+  
+
+    .genefoot{
+      display: flex;
+      flex-direction: row;
+      column-gap: normal;
+      background-color: rgb(1, 53, 1);
+      width: 100%;
+      margin-top: 250%;
+      height: 40vh;
+      padding: 20px;
+      
+    }
+
+    .foot{
+      
+      display: flex;
+      flex-direction: column;
+      row-gap: 3px;
+    }
+
+    .foot div{
+      width: 30px;
+      height: 6vh;
+      margin-left: -6px;
+      margin-top: 5px;
+      /* align-content: center; */
+      border-radius: 10px;
+      
+     
+      
+    
+    }
+
+    .foot div img{
+      width: 25px;
+      height: 4vh;
+      margin-left: -0.5px;
+      margin-top: 7px;
+      padding: 2px;
+      
+      
+
+      
+    }
+
+    .foota{
+     
+      display: flex;
+      flex-direction: column;
+      row-gap: 3px;
+    
+
+    }
+
+    .foota p{
+    
+    color: white;
+    text-align: left;
+    line-height: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12px;
+    }
+
+    .foota div{
+      width:200px;
+      height: 6vh;
+      margin-left: 7px;
+      margin-top: 5px;
+    }
+
+    .abtdrop button, .ourdrp button{
+      float: right;
+      background: red;
+      color: white;
+      margin-right: 3px;
+      margin-top: 3px;
+      padding: 3px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .modal {
+    display: none;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.8);  
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+}
+
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+
+.uparow{
+
+width: 30px; 
+height: 5vh; 
+background: rgb(255, 255, 255); margin-left: -30px;
+  
+}
+
+
+.uparrow{
+  width: 30px;
+  height: 30px;
+}
+
+.uparow:active{
+  background-color: rgb(17, 230, 17);
+}
+
+.identity{
+  text-align: center;
+}
+
+  </style>
+  
+</head>
+<body>
+
+  <div class="modal" id="mymodal"></div>
+
+ 
+  <nav> 
+
+    <div class="logo"><img src="Asset/cHIKEN.png" alt=""></div>
+    <div class="companyname" id="companyname"><h1>Helena's CrayFish Market</h1>
+    
+    <a href="cart.html"><img src="Asset/delete_3987222.png" alt=""  class="hambuger" ></a>
+    
+    </div>
+    
+    
+  
+  </nav> <br>
+  
+
+  <nav class='nextnav'>
+
+ <div class="about" id="about">About Us</a></div> 
+ <div class="services" id="services">Our Services</div> 
+ <div class="more"><a href="#genefoot" >Contact</a></div>  
+
+  </nav>
+
+  <div class="abtdrop" id="abtdrop">
+
+    <button id="clear">X</button>
+
+  </div>
+
+  <div class="ourdrp" id="ourdrp">
+    <button id="clear2">X</button>
+
+  </div>
+
+ 
+
+  <section id="body">
+
+  <div class="body">
+
+  <div class="first">
+    <img src="Asset/BIG BAG.jpg" alt=""> <p class="identity">Big bag</p>
+    <div class="addtocart" onclick="myFunction1()"><img src="Asset/delete_3987222.png" alt=""></div>
+   
+  </div> 
+
+
+
+   </div> 
+
+
+     <div class="body2">
+
+  <div class="fourth">
+    <img src="Asset/493257904_1238993654313532_4885769869824051546_n.jpg" alt=""> <p class="identity">Big Bucket</p>
+     <div class="addtocart"onclick="myFunction2()"><img src="Asset/delete_3987222.png" alt=""></div>
+  </div>
+
+  <div class="fifth">
+    <img src="Asset/492004929_122095964858843219_1031894848806169828_n.jpg" alt=""> <p class="identity">Half Bag</p>
+     <div class="addtocart"onclick="myFunction3()"><img src="Asset/delete_3987222.png" alt=""></div>
+  </div>
+
+   <div class="sixth">
+    <img src="Asset/300997015_101797502664821_1200877730522915316_n.jpg" alt=""> <p class="identity">Quater Bag</p>
+     <div class="addtocart"onclick="myFunction4()"><img src="Asset/delete_3987222.png" alt=""></div>
+   </div>
+
+     <div class="second">
+    <img src="Asset/474981262_562710636519598_1052177212870700887_n.jpg" alt=""> <p class="identity">Custard Rubber</p>
+     <div class="addtocart"onclick="myFunction5()"><img src="Asset/delete_3987222.png" alt=""></div>
+  </div>
+
+   <div class="third">
+    <img src="Asset/492004929_122095964858843219_1031894848806169828_n.jpg" alt=""> <p class="identity">Half bag</p>
+     <div class="addtocart"onclick="myFunction6()"><img src="Asset/delete_3987222.png" alt=""><img src="Asset/delete_3987222.png" alt=""></div>
+   </div> 
+   
+    
+
+   </div> 
+
+
+ 
+
+  
+  
+  
+  
+  </section>
+
+  
+
+   
+   
+  <div class="genefoot" id="genefoot">
+
+   <div class="foot">
+    <div style="background-color: white;"><img src="Asset/facebook_145802.png" alt=""></div>
+    <div style="background-color: white;"><img src="Asset/download__3_-removebg-preview.png" alt=""></div>
+    <div style="background-color: white;"><img src="Asset/download__2_-removebg-preview - Copy.png" alt=""></div>
+    <div style="background-color: white;"><img src="Asset/download__1_-removebg-preview.png" alt=""></div>
+    <div style="background-color: white;"><img src="Asset/home_4943257.png" alt=""></div>
+
+   </div>
+
+   <div class="foota">
+
+    <div><p>Solomon TItus Sampson</p></div>
+    <div><p>08116671404</p></div>
+    <div><p>08034179461</p></div>
+    <div><p>ssampson691@gmail.com</p></div>
+    <div><p>Oron, Akwa Ibom State</p></div>
+
+   </div>
+
+   <a href="#body"><div class="uparow" id="uparow"><img class="uparrow" src="Asset/arrow_5736392.png" alt=""></div></a>
+
+   </div>
+
+  
+</body>
+<script src="index.js"></script>
+</html>
